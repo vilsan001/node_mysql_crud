@@ -1,0 +1,24 @@
+<div style="margin-bottom: 20 px;" class="main"><a href="./">go to main page</a></div><br>
+<h1 style="margin-bottom: 20 px;" align="center">fill the form</h1>
+
+<div align="center"><form  action="/adddata">
+
+name: <input required style="display: flex;" type="text" name="name" placeholder="enter your name">
+class: <input required style="display: flex;" type="number" name="class" placeholder="enter your name">
+address: <input required style="display: flex;" type="text" name="address" placeholder="enter your name">
+
+<input type="submit" name="sub" value="add data">
+
+<br>
+
+{{#if isinserted}}
+<h1>data is inserted</h1>
+{{/if}}
+
+
+{{#if isalready}}
+<h1>this data is already presented</h1>
+
+{{/if}}
+
+</form></div> 

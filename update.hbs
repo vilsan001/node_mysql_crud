@@ -1,0 +1,52 @@
+<a href="./">go to main page</a>
+
+
+<div align="center"><h1 style="margin-bottom: 20px;">update data</h1>
+<form method="get" action="/updatesearch">
+<input style="display: flex;" type="search" name="updatesearch" placeholder="enter address to find"><br>
+<button>submit</button>
+ </form>
+
+ 
+
+
+{{#if msg2}}
+<h1>not found</h1>
+{{/if}}
+</div>
+
+{{#if msg1}}
+<div align="center">
+ <form action="/updatedataa">
+
+ {{#data}}
+
+name: <input required style="display: flex;" type="text" name="name" placeholder="enter your name" value="{{name}}">
+class: <input required style="display: flex;" type="number" name="classs" placeholder="enter your name" value="{{classs}}">
+address: <input required style="display: flex;" type="text" name="address" placeholder="enter your name" value="{{address}}">
+
+
+
+
+<input type="submit" name="sub" value="update  data">
+<hr>
+
+
+{{/data}}
+
+<br>
+
+
+{{#if umsg}}
+<h1>data updated</h1>
+{{/if}}
+
+
+{{#if umsg2}}
+<h1>error</h1>
+{{/if}}
+
+</form>
+</div>
+
+{{/if}}
